@@ -1,0 +1,5 @@
+package pkg1.VETCAI;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UsageDataRepository extends JpaRepository<UsageData, Integer> {}

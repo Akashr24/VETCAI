@@ -1,0 +1,14 @@
+pkg1\VETCAI\AdminUserRepository.class
+pkg1\VETCAI\DashboardController.class
+pkg1\VETCAI\AdminUser.class
+pkg1\VETCAI\DistrictRepository.class
+pkg1\VETCAI\DistrictController.class
+pkg1\VETCAI\TariffSetting.class
+pkg1\VETCAI\TariffSettingRepository.class
+pkg1\VetcaiApplication.class
+pkg1\VETCAI\District.class
+pkg1\VETCAI\LedService.class
+pkg1\VETCAI\LedController.class
+pkg1\VETCAI\UsageData$TariffLevel.class
+pkg1\VETCAI\UsageDataRepository.class
+pkg1\VETCAI\UsageData.class
