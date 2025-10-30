@@ -33,6 +33,36 @@
    - Green LED: GPIO14
 2. Connect LED cathodes (negative/shorter leg) to ESP32 ground (GND)
 
+### Circuit Diagram
+```
+                                ESP32 DevKit
+                               +------------+
+                               |            |
+     +----[220Ω]----RED LED---+  GPIO13    |
+                               |            |
+     +----[220Ω]--YELLOW LED--+  GPIO12    |
+                               |            |
+     +----[220Ω]--GREEN LED---+  GPIO14    |
+                               |            |
+     +-------------------------|  GND       |
+                               |            |
+                               +------------+
+
+LED Connection Details:
+┌──────────┬────────┬──────────┬─────────────┐
+│   LED    │  GPIO  │ Resistor │    Notes    │
+├──────────┼────────┼──────────┼─────────────┤
+│   Red    │   13   │  220Ω    │ Long leg +  │
+│  Yellow  │   12   │  220Ω    │ Long leg +  │
+│  Green   │   14   │  220Ω    │ Long leg +  │
+└──────────┴────────┴──────────┴─────────────┘
+
+Notes:
+- LED long leg (anode) → resistor → GPIO pin
+- LED short leg (cathode) → GND
+- All resistors are 220Ω (or 330Ω works too)
+```
+
 ## Spring Boot REST Endpoints
 Control LED lights on ESP32 devices through these REST endpoints:
 
@@ -163,3 +193,4 @@ void handleLed() {
 void loop() {
   server.handleClient();
 }
+```
