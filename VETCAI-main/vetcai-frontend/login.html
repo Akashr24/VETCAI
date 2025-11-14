@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VETCAI - Admin Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" style="padding-top:60px;max-width:420px">
+    <div class="card">
+      <header style="margin-bottom:8px">
+        <h1 style="font-size:20px;margin:0">Admin Login</h1>
+        <p class="muted">Sign in with your admin credentials</p>
+      </header>
+
+      <div class="form">
+        <label>Base URL
+          <input id="baseUrl" class="input-base" value="http://localhost:8080">
+        </label>
+        <input id="username" placeholder="Username">
+        <input id="password" placeholder="Password" type="password">
+        <div style="display:flex;gap:8px;align-items:center">
+          <button id="btnLogin" class="btn primary">Sign in</button>
+          <button id="btnClear" class="btn">Clear</button>
+        </div>
+
+        <div id="message" style="margin-top:8px;color:var(--muted)"></div>
+      </div>
+
+      <footer style="margin-top:12px;font-size:13px;color:var(--muted)">
+        <a href="index.html" style="color:var(--accent-2);text-decoration:none">&larr; Back to UI</a>
+      </footer>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

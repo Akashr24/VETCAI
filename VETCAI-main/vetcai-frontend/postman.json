@@ -1,0 +1,143 @@
+{
+  "info": {
+    "_postman_id": "b1a7f1a8-0000-4d2a-9c3b-abcdef012345",
+    "name": "VETCAI API",
+    "description": "Postman collection for the VETCAI Spring Boot API (local server assumed at {{baseUrl}}).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Dashboard - District Summary",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/dashboard/district-summary",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "dashboard",
+            "district-summary"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Districts - Get All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/districts",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "districts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Districts - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"districtName\": \"Central District\",\n  \"providerName\": \"Acme Energy\",\n  \"regionCode\": \"CEN-01\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/districts",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "districts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LED - Turn On (color)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/led/{{color}}/on",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "led",
+            "{{color}}",
+            "on"
+          ],
+          "variable": [
+            {
+              "key": "color",
+              "value": "red"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LED - Turn Off (color)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/led/{{color}}/off",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "led",
+            "{{color}}",
+            "off"
+          ],
+          "variable": [
+            {
+              "key": "color",
+              "value": "red"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

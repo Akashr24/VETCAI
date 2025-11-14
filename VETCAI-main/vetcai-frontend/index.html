@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VETCAI - Frontend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <h1>VETCAI</h1>
+      <p class="tag">Simple frontend to exercise the API</p>
+    </header>
+
+    <div class="settings">
+      <label>Base URL
+        <input id="baseUrl" value="http://localhost:8080" class="input-base">
+      </label>
+    </div>
+
+    <main class="grid">
+      <div class="card">
+        <h2>Dashboard</h2>
+        <p class="muted">Summary of usage per district</p>
+        <button class="btn primary" id="btnSummary">Get district summary</button>
+      </div>
+
+      <div class="card">
+        <h2>Districts</h2>
+        <div class="row">
+          <button class="btn" id="btnGetDistricts">Get all districts</button>
+        </div>
+        <div class="form">
+          <input id="districtName" placeholder="District name">
+          <input id="providerName" placeholder="Provider name">
+          <input id="regionCode" placeholder="Region code">
+          <button class="btn success" id="btnCreateDistrict">Create</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>LED</h2>
+        <div class="row">
+          <select id="ledColor">
+            <option>red</option>
+            <option>yellow</option>
+            <option>green</option>
+          </select>
+          <button class="btn" id="btnLedOn">Turn On</button>
+          <button class="btn" id="btnLedOff">Turn Off</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Tariffs</h2>
+        <div class="form">
+          <input id="tariffDistrictId" placeholder="District ID">
+          <div class="row">
+            <button class="btn" id="btnGetTariff">Get</button>
+          </div>
+          <input id="lowLimit" placeholder="Low limit">
+          <input id="mediumLimit" placeholder="Medium limit">
+          <input id="highLimit" placeholder="High limit">
+          <button class="btn success" id="btnSaveTariff">Save</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Usage</h2>
+        <div class="form">
+          <input id="usageDistrictId" placeholder="District ID">
+          <button class="btn" id="btnGetUsage">Get usage</button>
+        </div>
+      </div>
+
+      <div class="card card-wide">
+        <h2>Response</h2>
+        <pre id="output">Responses will appear here</pre>
+      </div>
+    </main>
+    <footer class="attribution">Local UI &middot; Import <code>postman.json</code> to Postman for more testing</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
