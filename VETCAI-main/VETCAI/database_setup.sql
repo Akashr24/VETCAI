@@ -85,4 +85,5 @@ CREATE TABLE IF NOT EXISTS admin_users (
 
 -- Sample admin (password should be hashed in production)
 INSERT IGNORE INTO admin_users (id, username, password, email)
-VALUES (1, 'Akash', 'akash@0987', 'akash@example.com');
+VALUES (1, 'Akash', 'XXXX', 'akash@example.com');
+
